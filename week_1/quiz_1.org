@@ -1,0 +1,73 @@
+#+AUTHOR: Marcio Woitek
+#+TITLE: Asymmetric Cryptography Overview
+#+DATE:
+#+LATEX_HEADER: \usepackage[a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm]{geometry}
+#+LATEX_HEADER: \usepackage[american]{babel}
+#+LATEX_HEADER: \usepackage{enumitem}
+#+LATEX_HEADER: \usepackage{float}
+#+LATEX_HEADER: \usepackage[sc]{mathpazo}
+#+LATEX_HEADER: \linespread{1.05}
+#+LATEX_HEADER: \renewcommand{\labelitemi}{$\rhd$}
+#+LATEX_HEADER: \setlength\parindent{0pt}
+#+LATEX_HEADER: \setlist[itemize]{leftmargin=*}
+#+LATEX_HEADER: \setlist{nosep}
+#+LATEX_HEADER: \newcommand{\enc}{\mathrm{Enc}}
+#+LATEX_HEADER: \newcommand{\dec}{\mathrm{Dec}}
+#+OPTIONS: toc:nil
+#+STARTUP: hideblocks
+
+#+BEGIN_SRC latex
+\thispagestyle{empty}
+\pagestyle{empty}
+#+END_SRC
+
+* Problem 1
+:PROPERTIES:
+:UNNUMBERED: notoc
+:END:
+
+- \(\dec(k_1,\enc(K_1,p))=p\)
+- \(\dec(K_2,\enc(k_2,p))=p\)
+
+* Problem 2
+:PROPERTIES:
+:UNNUMBERED: notoc
+:END:
+
+- Key distribution and management should be addressed when using asymmetric
+  cryptography.
+
+* Problem 3
+:PROPERTIES:
+:UNNUMBERED: notoc
+:END:
+
+- Both the public key and the private key should remain secret against an
+  attacker.
+- Both the sender and the receiver can use the same private key for encryption
+  and decryption.
+
+* Problem 4
+:PROPERTIES:
+:UNNUMBERED: notoc
+:END:
+
+- Solving \(f(x)\) if the input and \(k\) are known.
+- Solving the inverse of \(f\) if the input to the \(f\)-inverse and \(k\) are
+  known.
+
+* Problem 5
+:PROPERTIES:
+:UNNUMBERED: notoc
+:END:
+
+- Encryption/decryption
+- Key exchange
+- Digital signature
+
+* Problem 6
+:PROPERTIES:
+:UNNUMBERED: notoc
+:END:
+
+- Key exchange

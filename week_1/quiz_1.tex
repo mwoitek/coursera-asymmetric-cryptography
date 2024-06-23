@@ -1,0 +1,87 @@
+% Created 2024-06-22 Sat 21:40
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage[a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm]{geometry}
+\usepackage[american]{babel}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage[sc]{mathpazo}
+\linespread{1.05}
+\renewcommand{\labelitemi}{$\rhd$}
+\setlength\parindent{0pt}
+\setlist[itemize]{leftmargin=*}
+\setlist{nosep}
+\newcommand{\enc}{\mathrm{Enc}}
+\newcommand{\dec}{\mathrm{Dec}}
+\author{Marcio Woitek}
+\date{}
+\title{Asymmetric Cryptography Overview}
+\hypersetup{
+ pdfauthor={Marcio Woitek},
+ pdftitle={Asymmetric Cryptography Overview},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 29.3 (Org mode 9.6.24)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+\pagestyle{empty}
+
+\section*{Problem 1}
+\label{sec:org300835e}
+\begin{itemize}
+\item \(\dec(k_1,\enc(K_1,p))=p\)
+\item \(\dec(K_2,\enc(k_2,p))=p\)
+\end{itemize}
+
+\section*{Problem 2}
+\label{sec:org3e78536}
+\begin{itemize}
+\item Key distribution and management should be addressed when using asymmetric
+cryptography.
+\end{itemize}
+
+\section*{Problem 3}
+\label{sec:orgadfeb34}
+\begin{itemize}
+\item Both the public key and the private key should remain secret against an
+attacker.
+\item Both the sender and the receiver can use the same private key for encryption
+and decryption.
+\end{itemize}
+
+\section*{Problem 4}
+\label{sec:org6a3f707}
+\begin{itemize}
+\item Solving \(f(x)\) if the input and \(k\) are known.
+\item Solving the inverse of \(f\) if the input to the \(f\)-inverse and \(k\) are
+known.
+\end{itemize}
+
+\section*{Problem 5}
+\label{sec:orgc5191a2}
+\begin{itemize}
+\item Encryption/decryption
+\item Key exchange
+\item Digital signature
+\end{itemize}
+
+\section*{Problem 6}
+\label{sec:org562cf46}
+\begin{itemize}
+\item Key exchange
+\end{itemize}
+\end{document}
