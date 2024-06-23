@@ -1,0 +1,112 @@
+% Created 2024-06-22 Sat 23:03
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage[a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm]{geometry}
+\usepackage[american]{babel}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage[sc]{mathpazo}
+\linespread{1.05}
+\renewcommand{\labelitemi}{$\rhd$}
+\setlength\parindent{0pt}
+\setlist[itemize]{leftmargin=*}
+\setlist{nosep}
+\newcommand{\Mod}{\:\mathrm{mod}\:}
+\author{Marcio Woitek}
+\date{}
+\title{RSA Operations}
+\hypersetup{
+ pdfauthor={Marcio Woitek},
+ pdftitle={RSA Operations},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 29.3 (Org mode 9.6.24)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+\pagestyle{empty}
+
+\section*{Problem 1}
+\label{sec:org734283a}
+\textbf{Answer: 4}\\[0pt]
+
+When the consider the integers \(k\) in the range \(1\leq k\leq 12\), there are only 4
+integers that are relatively prime to 12: 1, 5, 7, 11. Hence:
+\begin{equation}
+\varphi(12)=4.
+\end{equation}
+
+\section*{Problem 2}
+\label{sec:org5b6634d}
+\textbf{Answer: 40}
+
+\begin{align}
+\varphi(n)&=\varphi(pq)\\
+&=(p-1)(q-1)\\
+&=(5-1)(11-1)\\
+&=40
+\end{align}
+
+\section*{Problem 3}
+\label{sec:org54a212f}
+\textbf{Answer: 14}\\[0pt]
+
+Assuming the message is encrypted using the public key, the ciphertext is given by
+\begin{equation}
+C=M^e\Mod n.
+\end{equation}
+By substituting the known values, we get
+\begin{equation}
+C=9^3\Mod 55.
+\end{equation}
+First, we use that \(9^3=729\). Next, we write this power as \(729=13\cdot 55+14\).
+Hence:
+\begin{equation}
+C=14.
+\end{equation}
+
+\section*{Problem 4}
+\label{sec:org4fe052e}
+\textbf{Answer: 60}
+
+\begin{align}
+\varphi(n)&=\varphi(pq)\\
+&=(p-1)(q-1)\\
+&=(7-1)(11-1)\\
+&=60
+\end{align}
+
+\section*{Problem 5}
+\label{sec:org4877588}
+\textbf{Answer: 57}\\[0pt]
+
+Assuming the message is encrypted using the public key, the ciphertext is given by
+\begin{equation}
+C=M^e\Mod n.
+\end{equation}
+By substituting the known values, we get
+\begin{equation}
+C=8^{17}\Mod 77.
+\end{equation}
+First, we use that \(8^{17}=2251799813685248\). Next, we write this power as
+\begin{equation*}
+2251799813685248=29244153424483\cdot 77+57.
+\end{equation*}
+Hence:
+\begin{equation}
+C=57.
+\end{equation}
+\end{document}

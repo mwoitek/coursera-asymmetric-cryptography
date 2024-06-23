@@ -1,0 +1,107 @@
+#+AUTHOR: Marcio Woitek
+#+TITLE: RSA Operations
+#+DATE:
+#+LATEX_HEADER: \usepackage[a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm]{geometry}
+#+LATEX_HEADER: \usepackage[american]{babel}
+#+LATEX_HEADER: \usepackage{enumitem}
+#+LATEX_HEADER: \usepackage{float}
+#+LATEX_HEADER: \usepackage[sc]{mathpazo}
+#+LATEX_HEADER: \linespread{1.05}
+#+LATEX_HEADER: \renewcommand{\labelitemi}{$\rhd$}
+#+LATEX_HEADER: \setlength\parindent{0pt}
+#+LATEX_HEADER: \setlist[itemize]{leftmargin=*}
+#+LATEX_HEADER: \setlist{nosep}
+#+LATEX_HEADER: \newcommand{\Mod}{\:\mathrm{mod}\:}
+#+OPTIONS: toc:nil
+#+STARTUP: hideblocks
+
+#+BEGIN_SRC latex
+\thispagestyle{empty}
+\pagestyle{empty}
+#+END_SRC
+
+* Problem 1
+:PROPERTIES:
+:UNNUMBERED: notoc
+:END:
+
+*Answer: 4*\\
+
+When the consider the integers $k$ in the range $1\leq k\leq 12$, there are only 4
+integers that are relatively prime to 12: 1, 5, 7, 11. Hence:
+\begin{equation}
+\varphi(12)=4.
+\end{equation}
+
+* Problem 2
+:PROPERTIES:
+:UNNUMBERED: notoc
+:END:
+
+*Answer: 40*
+
+\begin{align}
+\varphi(n)&=\varphi(pq)\\
+&=(p-1)(q-1)\\
+&=(5-1)(11-1)\\
+&=40
+\end{align}
+
+* Problem 3
+:PROPERTIES:
+:UNNUMBERED: notoc
+:END:
+
+*Answer: 14*\\
+
+Assuming the message is encrypted using the public key, the ciphertext is given by
+\begin{equation}
+C=M^e\Mod n.
+\end{equation}
+By substituting the known values, we get
+\begin{equation}
+C=9^3\Mod 55.
+\end{equation}
+First, we use that \(9^3=729\). Next, we write this power as \(729=13\cdot 55+14\).
+Hence:
+\begin{equation}
+C=14.
+\end{equation}
+
+* Problem 4
+:PROPERTIES:
+:UNNUMBERED: notoc
+:END:
+
+*Answer: 60*
+
+\begin{align}
+\varphi(n)&=\varphi(pq)\\
+&=(p-1)(q-1)\\
+&=(7-1)(11-1)\\
+&=60
+\end{align}
+
+* Problem 5
+:PROPERTIES:
+:UNNUMBERED: notoc
+:END:
+
+*Answer: 57*\\
+
+Assuming the message is encrypted using the public key, the ciphertext is given by
+\begin{equation}
+C=M^e\Mod n.
+\end{equation}
+By substituting the known values, we get
+\begin{equation}
+C=8^{17}\Mod 77.
+\end{equation}
+First, we use that \(8^{17}=2251799813685248\). Next, we write this power as
+\begin{equation*}
+2251799813685248=29244153424483\cdot 77+57.
+\end{equation*}
+Hence:
+\begin{equation}
+C=57.
+\end{equation}
