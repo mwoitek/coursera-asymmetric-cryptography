@@ -1,0 +1,91 @@
+% Created 2024-06-23 Sun 00:45
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage[a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm]{geometry}
+\usepackage[american]{babel}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage[sc]{mathpazo}
+\linespread{1.05}
+\renewcommand{\labelitemi}{$\rhd$}
+\setlength\parindent{0pt}
+\setlist[itemize]{leftmargin=*}
+\setlist{nosep}
+\newcommand{\Mod}{\:\mathrm{mod}\:}
+\author{Marcio Woitek}
+\date{}
+\title{RSA Algorithm}
+\hypersetup{
+ pdfauthor={Marcio Woitek},
+ pdftitle={RSA Algorithm},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 29.3 (Org mode 9.6.24)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+\pagestyle{empty}
+
+\section*{Problem 1}
+\label{sec:org700870a}
+\begin{itemize}
+\item \(d\)
+\item \(p\)
+\item \(q\)
+\item The Euler totient function of \(n\), \(\varphi(n)\)
+\end{itemize}
+
+\section*{Problem 2}
+\label{sec:org2dd71e5}
+\begin{itemize}
+\item After choosing \(d\), the extended Euclidean algorithm can be used to derive \(e\).
+\item After choosing \(e\), the extended Euclidean algorithm can be used to derive \(d\).
+\item For the public-private keys of RSA, \(e\) and \(d\), given any plaintext
+\(m\), \(m\) raised to the power of \(e\cdot d\) \(\left(m^{e\cdot d}\right)\)
+is equal to \(m\).
+\end{itemize}
+
+\section*{Problem 3}
+\label{sec:orgf66df00}
+\begin{itemize}
+\item 9
+\item 17
+\item 21
+\end{itemize}
+
+\section*{Problem 4}
+\label{sec:org3645bed}
+\textbf{Answer: 5}\\[0pt]
+
+We can determine the original plaintext \(m\) with the aid of the following equation:
+\begin{equation}
+m=\frac{m^{\prime}}{r}.
+\end{equation}
+We were given the value of \(m^{\prime}\): \(m^{\prime}=15\). So we need to find \(r\).
+To do so, we use the fact that the chosen ciphertext can be written as
+\begin{equation}
+c^{\prime}=cr^e\Mod n=14r^7\Mod 33=14\cdot 2187\Mod 33,
+\end{equation}
+where we've used the other information given in the problem statement. For the
+last equality to hold, we must have
+\begin{equation}
+r^7=2187\Rightarrow r=3.
+\end{equation}
+Hence:
+\begin{equation}
+m=\frac{15}{3}=5.
+\end{equation}
+\end{document}

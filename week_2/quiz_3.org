@@ -1,0 +1,77 @@
+#+AUTHOR: Marcio Woitek
+#+TITLE: RSA Algorithm
+#+DATE:
+#+LATEX_HEADER: \usepackage[a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm]{geometry}
+#+LATEX_HEADER: \usepackage[american]{babel}
+#+LATEX_HEADER: \usepackage{enumitem}
+#+LATEX_HEADER: \usepackage{float}
+#+LATEX_HEADER: \usepackage[sc]{mathpazo}
+#+LATEX_HEADER: \linespread{1.05}
+#+LATEX_HEADER: \renewcommand{\labelitemi}{$\rhd$}
+#+LATEX_HEADER: \setlength\parindent{0pt}
+#+LATEX_HEADER: \setlist[itemize]{leftmargin=*}
+#+LATEX_HEADER: \setlist{nosep}
+#+LATEX_HEADER: \newcommand{\Mod}{\:\mathrm{mod}\:}
+#+OPTIONS: toc:nil
+#+STARTUP: hideblocks
+
+#+BEGIN_SRC latex
+\thispagestyle{empty}
+\pagestyle{empty}
+#+END_SRC
+
+* Problem 1
+:PROPERTIES:
+:UNNUMBERED: notoc
+:END:
+
+- \(d\)
+- \(p\)
+- \(q\)
+- The Euler totient function of \(n\), \(\varphi(n)\)
+
+* Problem 2
+:PROPERTIES:
+:UNNUMBERED: notoc
+:END:
+
+- After choosing \(d\), the extended Euclidean algorithm can be used to derive \(e\).
+- After choosing \(e\), the extended Euclidean algorithm can be used to derive \(d\).
+- For the public-private keys of RSA, \(e\) and \(d\), given any plaintext
+  \(m\), \(m\) raised to the power of \(e\cdot d\) \(\left(m^{e\cdot d}\right)\)
+  is equal to \(m\).
+
+* Problem 3
+:PROPERTIES:
+:UNNUMBERED: notoc
+:END:
+
+- 9
+- 17
+- 21
+
+* Problem 4
+:PROPERTIES:
+:UNNUMBERED: notoc
+:END:
+
+*Answer: 5*\\
+
+We can determine the original plaintext \(m\) with the aid of the following equation:
+\begin{equation}
+m=\frac{m^{\prime}}{r}.
+\end{equation}
+We were given the value of \(m^{\prime}\): \(m^{\prime}=15\). So we need to find \(r\).
+To do so, we use the fact that the chosen ciphertext can be written as
+\begin{equation}
+c^{\prime}=cr^e\Mod n=14r^7\Mod 33=14\cdot 2187\Mod 33,
+\end{equation}
+where we've used the other information given in the problem statement. For the
+last equality to hold, we must have
+\begin{equation}
+r^7=2187\Rightarrow r=3.
+\end{equation}
+Hence:
+\begin{equation}
+m=\frac{15}{3}=5.
+\end{equation}
