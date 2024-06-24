@@ -1,0 +1,89 @@
+#+AUTHOR: Marcio Woitek
+#+TITLE: Diffie-Hellman Key Exchange and El Gamal Encryption
+#+DATE:
+#+LATEX_HEADER: \usepackage[a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm]{geometry}
+#+LATEX_HEADER: \usepackage[american]{babel}
+#+LATEX_HEADER: \usepackage{enumitem}
+#+LATEX_HEADER: \usepackage{float}
+#+LATEX_HEADER: \usepackage[sc]{mathpazo}
+#+LATEX_HEADER: \linespread{1.05}
+#+LATEX_HEADER: \renewcommand{\labelitemi}{$\rhd$}
+#+LATEX_HEADER: \setlength\parindent{0pt}
+#+LATEX_HEADER: \setlist[itemize]{leftmargin=*}
+#+LATEX_HEADER: \setlist{nosep}
+#+LATEX_HEADER: \newcommand{\Mod}{\:\mathrm{mod}\:}
+#+LATEX_HEADER: \newcommand{\dlog}[3]{\mathrm{dlog}_{#2,#3}\:#1}
+#+OPTIONS: toc:nil
+#+STARTUP: hideblocks
+
+#+BEGIN_SRC latex
+\thispagestyle{empty}
+\pagestyle{empty}
+#+END_SRC
+
+* Problem 1
+:PROPERTIES:
+:UNNUMBERED: notoc
+:END:
+
+- The prime modulus (\( p \))
+- Bob's public key (\( Y_B \))
+- The primitive root of the prime modulus (\( a \))
+- The shared key by the protocol (\( K \))
+
+* Problem 2
+:PROPERTIES:
+:UNNUMBERED: notoc
+:END:
+
+- The shared key by the protocol (\( K \))
+- Bob's private key (\( X_B \)) [The instructor used the wrong notation]
+
+* Problem 3
+:PROPERTIES:
+:UNNUMBERED: notoc
+:END:
+
+*Answer: 6*\\
+
+The formula for Alice's public key is
+\begin{equation}
+Y_A=a^{X_A}\Mod p.
+\end{equation}
+Substituting \( a=2 \), \( p=11 \) and \( Y_A=9 \) into this equation, we get
+\begin{equation}
+9=2^{X_A}\Mod 11\Rightarrow X_A=\dlog{9}{2}{11}=6.
+\end{equation}
+
+* Problem 4
+:PROPERTIES:
+:UNNUMBERED: notoc
+:END:
+
+*Answer: 3*\\
+
+To compute the secret key \( K \), we can use the following equation:
+\begin{equation}
+K=Y_{B}^{X_A}\Mod p.
+\end{equation}
+By using the values of \( Y_B \), \( X_A \) and \( p \), we obtain
+\begin{equation}
+K=3^6\Mod 11=729\Mod 11=3.
+\end{equation}
+
+* Problem 5
+:PROPERTIES:
+:UNNUMBERED: notoc
+:END:
+
+- Diffie-Hellman Key Exchange protocol is vulnerable to MITM attack because of
+  the lack of authentication.
+
+* Problem 6
+:PROPERTIES:
+:UNNUMBERED: notoc
+:END:
+
+- El Gamal Encryption includes the message and the key that is used to protect
+  the message, and the key itself is protected against eavesdropping.
+- El Gamal Encryption uses a prime modulus and a primitive root of the modulus.

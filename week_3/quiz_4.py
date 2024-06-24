@@ -38,3 +38,10 @@ identify_primitive_roots(candidates, p)
 p = 7
 candidates = list(range(1, 7))
 identify_primitive_roots(candidates, p)
+
+# %%
+discrete_log(9, 2, 11)
+
+# %%
+print(3**6)
+print(3**6 % 11)

@@ -1,0 +1,93 @@
+% Created 2024-06-23 Sun 21:54
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage[a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm]{geometry}
+\usepackage[american, english]{babel}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage[sc]{mathpazo}
+\linespread{1.05}
+\renewcommand{\labelitemi}{$\rhd$}
+\setlength\parindent{0pt}
+\setlist[itemize]{leftmargin=*}
+\setlist{nosep}
+\newcommand{\Mod}{\:\mathrm{mod}\:}
+\newcommand{\dlog}[3]{\mathrm{dlog}_{#2,#3}\:#1}
+\author{Marcio Woitek}
+\date{}
+\title{Diffie-Hellman Key Exchange and El Gamal Encryption}
+\hypersetup{
+ pdfauthor={Marcio Woitek},
+ pdftitle={Diffie-Hellman Key Exchange and El Gamal Encryption},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 29.3 (Org mode 9.8)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+\pagestyle{empty}
+\section*{Problem 1}
+\label{sec:orgb43a426}
+\begin{itemize}
+\item The prime modulus (\(p\))
+\item Bob's public key (\(Y_B\))
+\item The primitive root of the prime modulus (\(a\))
+\item The shared key by the protocol (\(K\))
+\end{itemize}
+\section*{Problem 2}
+\label{sec:orgdf92db4}
+\begin{itemize}
+\item The shared key by the protocol (\(K\))
+\item Bob's private key (\(X_B\)) [The instructor used the wrong notation]
+\end{itemize}
+\section*{Problem 3}
+\label{sec:org331cdca}
+\textbf{Answer: 6}\\
+
+The formula for Alice's public key is
+\begin{equation}
+Y_A=a^{X_A}\Mod p.
+\end{equation}
+Substituting \(a=2\), \(p=11\) and \(Y_A=9\) into this equation, we get
+\begin{equation}
+9=2^{X_A}\Mod 11\Rightarrow X_A=\dlog{9}{2}{11}=6.
+\end{equation}
+\section*{Problem 4}
+\label{sec:orgf5e7333}
+\textbf{Answer: 3}\\
+
+To compute the secret key \(K\), we can use the following equation:
+\begin{equation}
+K=Y_{B}^{X_A}\Mod p.
+\end{equation}
+By using the values of \(Y_B\), \(X_A\) and \(p\), we obtain
+\begin{equation}
+K=3^6\Mod 11=729\Mod 11=3.
+\end{equation}
+\section*{Problem 5}
+\label{sec:orgab63d9b}
+\begin{itemize}
+\item Diffie-Hellman Key Exchange protocol is vulnerable to MITM attack because of
+the lack of authentication.
+\end{itemize}
+\section*{Problem 6}
+\label{sec:org68016e8}
+\begin{itemize}
+\item El Gamal Encryption includes the message and the key that is used to protect
+the message, and the key itself is protected against eavesdropping.
+\item El Gamal Encryption uses a prime modulus and a primitive root of the modulus.
+\end{itemize}
+\end{document}
