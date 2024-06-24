@@ -1,0 +1,103 @@
+% Created 2024-06-23 Sun 23:40
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage[a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm]{geometry}
+\usepackage[american, english]{babel}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage[sc]{mathpazo}
+\linespread{1.05}
+\renewcommand{\labelitemi}{$\rhd$}
+\setlength\parindent{0pt}
+\setlist[itemize]{leftmargin=*}
+\setlist{nosep}
+\author{Marcio Woitek}
+\date{}
+\title{Key Distribution and Management}
+\hypersetup{
+ pdfauthor={Marcio Woitek},
+ pdftitle={Key Distribution and Management},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 29.3 (Org mode 9.8)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+\pagestyle{empty}
+\section*{Problem 1}
+\label{sec:org977e802}
+\begin{itemize}
+\item Alice's private key
+\item Bob's private key
+\end{itemize}
+\section*{Problem 2}
+\label{sec:orgb434af4}
+\textbf{Answer: Nonce}
+\section*{Problem 3}
+\label{sec:orgd1826d4}
+\begin{itemize}
+\item To connect the response to the corresponding communication
+\end{itemize}
+\section*{Problem 4}
+\label{sec:org3979162}
+\textbf{Answer: 190}\\
+
+The total number of virtual machines is \(n=5\cdot 4=20\). In this case, there
+will be one key exchange session for each pair of VMs. Therefore, the number of
+sessions is given by
+\begin{equation}
+\binom{n}{2}=\frac{n(n-1)}{2}=\frac{20(20-1)}{2}=190.
+\end{equation}
+\section*{Problem 5}
+\label{sec:org46bb9ae}
+\textbf{Answer: 19900}\\
+
+The total number of applications is \(n=5\cdot 4\cdot 10=200\). In this case,
+there will be one key exchange session for each pair of applications. Therefore,
+the number of sessions is given by
+\begin{equation}
+\binom{n}{2}=\frac{n(n-1)}{2}=\frac{200(200-1)}{2}=19900.
+\end{equation}
+\section*{Problem 6}
+\label{sec:org0d484ec}
+\begin{itemize}
+\item The public key of the user (the certificate subject)
+\item The private key of CA
+\item The request for the user's certificate
+\end{itemize}
+\section*{Problem 7}
+\label{sec:org17f4ea5}
+\begin{itemize}
+\item The certificate itself
+\item The public key of CA
+\end{itemize}
+\section*{Problem 8}
+\label{sec:org1ae3f70}
+\begin{itemize}
+\item Digital certificates can be requested before using it to share the public key.
+\item Once receiving the digital certificates signed by a Certificate Authority
+(CA), a user can share it with anybody whom it wants to communicate.
+\end{itemize}
+\section*{Problem 9}
+\label{sec:orgb82973f}
+\begin{itemize}
+\item Manage certificates
+\item Distribute certificates
+\item Create certificates
+\item Store certificates
+\item Revoke certificates
+\end{itemize}
+\end{document}

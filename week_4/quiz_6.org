@@ -1,0 +1,107 @@
+#+AUTHOR: Marcio Woitek
+#+TITLE: Key Distribution and Management
+#+DATE:
+#+LATEX_HEADER: \usepackage[a4paper,left=1cm,right=1cm,top=1cm,bottom=1cm]{geometry}
+#+LATEX_HEADER: \usepackage[american]{babel}
+#+LATEX_HEADER: \usepackage{enumitem}
+#+LATEX_HEADER: \usepackage{float}
+#+LATEX_HEADER: \usepackage[sc]{mathpazo}
+#+LATEX_HEADER: \linespread{1.05}
+#+LATEX_HEADER: \renewcommand{\labelitemi}{$\rhd$}
+#+LATEX_HEADER: \setlength\parindent{0pt}
+#+LATEX_HEADER: \setlist[itemize]{leftmargin=*}
+#+LATEX_HEADER: \setlist{nosep}
+#+OPTIONS: toc:nil
+#+STARTUP: hideblocks
+
+#+BEGIN_SRC latex
+\thispagestyle{empty}
+\pagestyle{empty}
+#+END_SRC
+
+* Problem 1
+:PROPERTIES:
+:UNNUMBERED: notoc
+:END:
+
+- Alice's private key
+- Bob's private key
+
+* Problem 2
+:PROPERTIES:
+:UNNUMBERED: notoc
+:END:
+
+*Answer: Nonce*
+
+* Problem 3
+:PROPERTIES:
+:UNNUMBERED: notoc
+:END:
+
+- To connect the response to the corresponding communication
+
+* Problem 4
+:PROPERTIES:
+:UNNUMBERED: notoc
+:END:
+
+*Answer: 190*\\
+
+The total number of virtual machines is \( n=5\cdot 4=20 \). In this case, there
+will be one key exchange session for each pair of VMs. Therefore, the number of
+sessions is given by
+\begin{equation}
+\binom{n}{2}=\frac{n(n-1)}{2}=\frac{20(20-1)}{2}=190.
+\end{equation}
+
+* Problem 5
+:PROPERTIES:
+:UNNUMBERED: notoc
+:END:
+
+*Answer: 19900*\\
+
+The total number of applications is \( n=5\cdot 4\cdot 10=200 \). In this case,
+there will be one key exchange session for each pair of applications. Therefore,
+the number of sessions is given by
+\begin{equation}
+\binom{n}{2}=\frac{n(n-1)}{2}=\frac{200(200-1)}{2}=19900.
+\end{equation}
+
+* Problem 6
+:PROPERTIES:
+:UNNUMBERED: notoc
+:END:
+
+- The public key of the user (the certificate subject)
+- The private key of CA
+- The request for the user's certificate
+
+* Problem 7
+:PROPERTIES:
+:UNNUMBERED: notoc
+:END:
+
+- The certificate itself
+- The public key of CA
+
+* Problem 8
+:PROPERTIES:
+:UNNUMBERED: notoc
+:END:
+
+- Digital certificates can be requested before using it to share the public key.
+- Once receiving the digital certificates signed by a Certificate Authority
+  (CA), a user can share it with anybody whom it wants to communicate.
+
+* Problem 9
+:PROPERTIES:
+:UNNUMBERED: notoc
+:END:
+
+- Manage certificates
+- Distribute certificates
+- Create certificates
+- Store certificates
+- Revoke certificates
